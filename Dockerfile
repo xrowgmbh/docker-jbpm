@@ -6,13 +6,11 @@ MAINTAINER "Björn Dieding" <bjoern@xrow.de>
 ENV LANG en_US.utf8
 ENV container=docker
 
-ADD base/etc/start_jbpm-wb.sh $JBOSS_HOME/bin/start_jbpm-wb.sh
-RUN chmod 755 $JBOSS_HOME/bin/start_jbpm-wb.sh
-
 ####### CONFIGURATION ############
 USER root
 ADD base/etc/start_jbpm-wb.sh $JBOSS_HOME/bin/start_jbpm-wb.sh
 RUN chown jboss:jboss $JBOSS_HOME/bin/start_jbpm-wb.sh
+RUN chmod 755 $JBOSS_HOME/bin/start_jbpm-wb.sh
 
 ####### CUSTOM JBOSS USER ############
 # Switchback to jboss user
