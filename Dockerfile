@@ -11,7 +11,7 @@ ENV JBPM_VERSION 6.2.0.Final
 ENV JBPM_CLASSIFIER wildfly8
 ENV JBPM_CONTEXT_PATH jbpm-console
 ENV DASHBUILDER_CONTEXT_PATH dashbuilder
-ENV JAVA_OPTS -XX:MaxPermSize=256m -Xms256m -Xmx512m -Dorg.uberfire.nio.git.ssh.host=0.0.0.0
+ENV JAVA_OPTS -XX:MaxPermSize=256m -Xms256m -Xmx512m -Dorg.uberfire.nio.git.ssh.host=0.0.0.0 -Dorg.uberfire.nio.git.dir=/mnt
 
 ####### RUNNING JBPM-WB ############
 WORKDIR $JBOSS_HOME/bin/
